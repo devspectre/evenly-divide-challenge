@@ -17,8 +17,10 @@ def get_account_ids_to_run_every_x_minutes(
         return []
     now = datetime.now()
     current_minute = now.minute
+    # get which bucket(group) we should run at this minute
     bucket_number = current_minute % MINUTE_INTERVAL
 
+    # select account ids belong to the bucket that should run on current minute
     return [
         account_id
         for account_id in account_ids_list
@@ -37,8 +39,10 @@ def get_account_ids_to_run_every_x_hours(
         return []
     now = datetime.now()
     current_minute, current_hour = now.minute, now.hour
+    # get which bucket(group) we should run at this minute
     bucket_number = (current_hour * 60 + current_minute) % (HOUR_INTERVAL * 60)
 
+    # select account ids belong to the bucket that should run on current minute
     return [
         account_id
         for account_id in account_ids_list
