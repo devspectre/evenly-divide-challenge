@@ -15,6 +15,8 @@ The principle is as same as 'every 15 minutes' solution.
 
 We just have more buckets which means we can run less accounts every minute.
 
+For example, if we want to sync accounts every 3 hours, then we just need to run an account once every 3 * 60 minutes, which means we can have 180 groups.
+
 
 
 The code implements that idea.
