@@ -30,5 +30,5 @@ Any environment with Python 3.x installed.
 ## Run
 
 ```sh
-python schedule.py
+python3 schedule.py
 ```
